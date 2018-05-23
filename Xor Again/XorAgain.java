@@ -34,7 +34,7 @@ class Reader {
 	}
 }
 
-public class XorAgain{
+public class XorAgain {
 
 	public static void main(String[] args) throws IOException {
 		Reader.init(System.in);
@@ -43,11 +43,11 @@ public class XorAgain{
 			int N = Reader.nextInt();
 			int[] arr = new int[N];
 			for (int i = 0; i < N; i++) {
-				arr[i] = Reader.nextInt();				
+				arr[i] = Reader.nextInt();
 			}
-			int xor=0;
+			int xor = 0;
 			for (int i = 0; i < N; i++) {
-					xor =  xor ^ (arr[i] + arr[i]);
+				xor = xor ^ (arr[i] + arr[i]);
 			}
 			System.out.println(xor);
 		}

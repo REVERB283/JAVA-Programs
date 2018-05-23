@@ -1,0 +1,27 @@
+Maximum Working Hours
+
+Initially you have total of n pens and you start using a new pen at every hour. At the end of the hour, you throw
+that pen and never use it. If you work consecutively m-1 hour, then at the mth hour you will be rewarded a new pen.
+Formally you will get a new pen at every (i * m)th (i > 0) hour. How many hours you have to work until you go back to
+sleep. You’ll go back to sleep when you have no more new pen to write. Print the maximum no of hours you’ll have
+to work. If there’s no way you’ll be able to sleep at all, print "No Sleep" as the output.
+
+Input
+Line 1 contains T(1 <= T <= 10).
+Each testcase contains 2 space separated integers n and m (1 <= n, m <= 100).
+
+Output
+Print the maximum no of hours you’ll have to work till you go back to sleep.
+If no sleep is possible, print "No Sleep" (without quotes).
+
+Example Input
+2
+2 2
+3 2
+
+Example Output
+3
+5
+
+Note
+The new pen you’ll get at the mth hour, you won’t be able to use it before (m+1)th hour.

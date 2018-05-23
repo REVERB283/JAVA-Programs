@@ -58,7 +58,6 @@ public class MaxAss {
 			for (int i = 0; i < N; i++) {
 				start[i] = matrix[i][0];
 				end[i] = matrix[i][1];
-				// System.out.println(start[i] + " " + end[i]);
 			}
 			int i = 0;
 			int count = 1;

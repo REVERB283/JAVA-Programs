@@ -1,0 +1,55 @@
+Maximum Assignment at a Time
+
+Another name of IIITD is "deadline". As you all know IIITD’s life is a very busy life with lots of assignments and
+deadlines. You are also a student of IIITD and you know sometimes there are lots of assignments at the same time
+and it is not possible to do all the assignments. So, your task is to design an algorithm to choose the maximum
+number of assignments that can be done at a time.
+
+Input
+The first line consists of an integer T, the number of test cases. For each test case the first line consists
+of an integer N, the number of activities. Then the next N lines contains two integers m and n, the start
+and end time of each activity.
+*  1 <= T <=10
+*  1 <= N <= 100000
+*  0 <= start < end <= 1000000
+
+Output
+For each test case find the maximum number of assignments that you can do.
+
+Example Input
+3
+3
+3 9
+2 8
+6 9
+4
+1 7
+5 8
+7 8
+1 8
+6
+7 9
+0 10
+4 5
+8 9
+4 10
+5 7
+
+1
+9
+1 2
+5 8
+3 65
+23 32
+1 52
+31 54
+45 50
+2 10
+5 6
+
+Example Output
+1
+2
+3
+
+4

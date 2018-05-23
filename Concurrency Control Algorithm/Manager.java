@@ -38,7 +38,7 @@ class Reader { // Reader class for inputs
 	}
 }
 
-public class manager {
+public class Manager {
 
 	public static void ReadFile(File f, Hashtable<Integer, HashSet> h, Hashtable<Integer, Integer> i)
 			throws FileNotFoundException {

@@ -1,0 +1,38 @@
+Concurrency Control Algorithm
+
+In this assignment, you have to implement a concurrency control algorithm for an airline database. The
+system consists of a transaction threads, concurrency control manager and an airline database. The database
+has a set of transactions and data structures containing flight information (passenger lists for all flights).
+Each transaction thread (TT) should have the following structure:
+
+Repeat
+*  Select a transaction type randomly
+*  Select object (flight and passenger id) for transaction randomly
+*  Invoke transaction
+
+The possible transactions are:
+*  Reserve(F, i): reserve a seat for passenger with id i on flight F, where i > 0.
+*  Cancel(F, i): cancel reservation for passenger with id i from flight F.
+*  My_Flights(id): returns the set of flights on which passenger i has a reservation.
+*  Total_Reservations(): returns the sum total of all reservations on all flights.
+*  Transfer(F1,F2,i): transfer passenger i from flight F1 to F2. This transaction should have no impact if
+   the passenger is not found in F1 or there is no room in F2.
+
+You must choose appropriate data structures to implement the flight database. However, these data structures
+must contain no synchronization code. The Concurrency Control Manager (CCM) must implement the mechanism to
+control access to the data structures. At the minimum, it should include locking and unlocking operations. The
+Transaction object must implement the operations Reserve, Cancel, My_Flights, Total_reservations and Transfer
+operations (described above). Each of these operation must invoke the necessary lock and unlock operations and
+operations on the data structures.
+
+The goal is to study performance improvements based on the granularity of locking. The first version of the
+program must implement only serial schedules (lock the entire database). You must then compare the performance
+to your second version which does two-phase locking at a more fine-grained level. You must exploit semantics
+of the operations to allow as much concurrency as possible.
+
+The performance must be measured in terms of transaction throughput (number of transactions completed over a
+specific interval of time). You must have a sleep statement inside the function calls of the data structures
+to simulate time required to access the database. You must plot the following data for each version: (a) Impact
+of number of TT threads on throughput, (b) Impact of the transaction mix on throughput. You should have 
+information for around 5 flights. Each flight should have a different bound of the number of seats available.
+The number of TT threads should be increased to a sufficient number to see a trend the performance graphs.
